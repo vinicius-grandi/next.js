@@ -1,0 +1,9 @@
+{
+  "name": "next.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vinicius-grandi/next.js.git",
+  "author": "Vinícius Gustavo Grandi <93281527+vinicius-grandi@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
