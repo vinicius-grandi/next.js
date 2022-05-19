@@ -22,7 +22,8 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "projectRoot"
   },
   "settings": {
     "react": {
