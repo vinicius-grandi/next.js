@@ -1,6 +1,6 @@
 {
   "root": true,
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -9,7 +9,9 @@
     "plugin:import/warnings",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
-    "airbnb"
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended"
   ],
   "env": {
     "browser": true,
@@ -19,16 +21,31 @@
   },
   "parserOptions": {
     "ecmaVersion": 2018,
+    "requireConfigFile": false,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     },
-    "projectRoot"
+    "project": "tsconfig.json"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
   },
-  "plugins": []
+  "plugins": ["prettier", "react"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "react/react-in-jsx-scope": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ]
+  }
 }
