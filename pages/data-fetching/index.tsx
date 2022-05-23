@@ -1,4 +1,5 @@
 import { GetStaticPropsResult } from 'next';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 type Todo = {
@@ -42,9 +43,12 @@ function DataFetchingPage({ data }: { data: Todo[] }) {
         {data && data.map((todo) => (
           <li key={todo.id}>
             <p>
-              {todo.title}
+              <Link href={`/todos/${todo.id}`}>
+                {todo.title}
+              </Link>
+
               {' '}
-              \\
+              \
               {' '}
               <strong>
                 USER:
